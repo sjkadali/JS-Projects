@@ -5,9 +5,12 @@
 }
 
 body {
-    background-image: url("images/flowering-cherry.jpg");
+    background-image: url("images/sky.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    min-height: 50vh;
+    min-width: 50vh;
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
