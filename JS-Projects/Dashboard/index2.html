@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Dashboard</title>
+    <link rel="stylesheet" href="index2.css">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+     <!-- Navbar -->
+    <navbar class="navbar">
+        <button class="menu-btn" onclick="openSidebar()">☰</button>
+        <div class="navbar-left">
+            <input type="text" class="search-bar" placeholder="Search products, orders...">
+            <span class="material-icons-outlined">search</span>
+          </div>
+          <div class="navbar-right">
+            <span class="material-icons-outlined">notifications</span>
+            <span class="material-icons-outlined">email</span>
+            <div class="profile">
+                <span>👤 Admin</span>
+            </div>
+        </div>
+    </navbar>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <h2><span class="material-icons-outlined">storefront</span>E-Shop</h2>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        <ul>
+            <li><a href="#">📊 Dashboard</a></li>
+            <li><a href="#">🛍️ Orders</a></li>
+            <li><a href="#">📦 Products</a></li>
+            <li><a href="#">👥 Customers</a></li>
+            <li><a href="#">📈 Analytics</a></li>
+            <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Cards Section -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Sales</h3>
+                <p>$15,420</p>
+            </div>
+            <div class="card">
+                <h3>Orders</h3>
+                <p>320</p>
+            </div>
+            <div class="card">
+                <h3>Customers</h3>
+                <p>1,200</p>
+            </div>
+            <div class="card">
+                <h3>Revenue</h3>
+                <p>$45,000</p>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts">
+            <canvas class="charts-card" id="salesChart"></canvas>
+            <canvas class="charts-card" id="revenueChart"></canvas>
+        </div>
+
+        <!-- Recent Orders Table -->
+        <div class="orders">
+            <h2>Recent Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1234</td>
+                        <td>John Doe</td>
+                        <td>$120</td>
+                        <td class="completed">Completed</td>
+                    </tr>
+                    <tr>
+                        <td>#1235</td>
+                        <td>Jane Smith</td>
+                        <td>$250</td>
+                        <td class="pending">Pending</td>
+                    </tr>
+                    <tr>
+                        <td>#1236</td>
+                        <td>Sam Wilson</td>
+                        <td>$90</td>
+                        <td class="cancelled">Cancelled</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <script src="index2.js"></script>
+    </div>
+</body>
+</html>
